@@ -1,0 +1,24 @@
+# Original:  A B C D E F G ... X Y Z
+# Shifted:   D E F G H I J ... A B C
+
+# 'A' → 'D'
+# 'B' → 'E'  
+# 'C' → 'F'
+# ...
+# 'X' → 'A' (wraps around)
+# 'Y' → 'B' (wraps around)
+# 'Z' → 'C' (wraps around)
+
+alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+shift = 3       
+def shift_alphabet(alphabet, shift):
+    shifted = []
+    for char in alphabet:
+        if char.isalpha():
+            # Calculate the new position with wrap-around using modulo
+            new_pos = (ord(char) - ord('A') + shift) % 26
+            shifted_char = chr(ord('A') + new_pos)
+            shifted.append(shifted_char)
+        else:
+            shifted.append(char)  # Non-alphabet characters remain unchanged
+    return ''.join(shifted)

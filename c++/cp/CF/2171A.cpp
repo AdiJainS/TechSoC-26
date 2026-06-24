@@ -1,0 +1,14 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main (){
+    int t;
+    cin >> t;
+    while(t--){
+        int l;
+        cin >> l;
+        if (l%2 !=0) cout << 0 << endl;
+        else
+        cout << l/4 +1 << endl;
+         
+    }
+}

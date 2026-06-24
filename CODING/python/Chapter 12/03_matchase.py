@@ -1,0 +1,16 @@
+def https_status(status):
+    match status :
+        case 200:
+            return "OK"
+        case 404:
+            return "Not found"
+        case 500:
+            return "Internal Server err"
+        
+        case _:
+         return "unknown status" # Usage print(http_status(200)) # Output: OK print(http_status (404)) 
+                       # Output: Not Found print(http_status(500)) # Output: Internal Server
+
+print(https_status(5007))
+
+    

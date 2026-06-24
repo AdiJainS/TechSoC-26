@@ -1,0 +1,16 @@
+import pyttsx3
+
+engine = pyttsx3.init()
+engine.setProperty('rate', 170)
+engine.setProperty('volume', 1.0)
+
+voices = engine.getProperty('voices')
+print("Available voices:")
+for i, v in enumerate(voices):
+    print(i, v.id)
+
+if voices:
+    engine.setProperty('voice', voices[0].id)
+
+engine.say("Hello, this is a test. If you hear me, text to speech is working.")
+engine.runAndWait()
