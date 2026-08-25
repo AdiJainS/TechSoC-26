@@ -1,1 +1,0 @@
-print("Sphinx thinks you said " + r.recognize_sphinx(audio))
