@@ -1,8 +1,0 @@
-{
-  "scripts": {
-    "dev": "cd Cynaptics-Website-2025 && npm run dev"
-  },
-  "dependencies": {
-    "node": "^26.3.1"
-  }
-}
